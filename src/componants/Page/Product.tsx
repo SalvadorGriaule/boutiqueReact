@@ -1,14 +1,14 @@
 import { products } from "../../assets/db/produits.json"
-import { useRef,useCallback, useState } from "react"
+import { useRef, useState } from "react"
 
 export default function Product() {
     let input = useRef<null|HTMLInputElement>(null)
     const [search,setSearch] = useState<any[]>([]);
-    const searchAct = useCallback((str:string) => {
+    const searchAct = (str:string) => {
         let t = products.filter(elem => elem.name.includes(str))
         setSearch(t)
         console.log(search,t);
-    },[])
+    }
 
     return (
         <>

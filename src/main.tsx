@@ -13,9 +13,8 @@ createRoot(document.getElementById('root')!).render(
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<App />} />
-        <Route path="categorie" element={<Categorie />}>
-          <Route path=":categId" element={<ByCatg />} />
-        </Route>
+        <Route path="categorie" element={<Categorie />} />
+          <Route path="categorie/:categId" element={<ByCatg />} />
         <Route path="contact" element={<Contact />}/>
         <Route path="product" element={<Product />}/>
       </Route>

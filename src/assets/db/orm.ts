@@ -8,8 +8,9 @@ const listCatg = (): Map<string, { len: number, name: string }> => {
     return catg
 }
 
-const productByCatg = (catg: string) => {
-    return products.filter(elemPr => elemPr.category == catg)
+const productByCatg = (catg: string) => {console.log(catg.categId);
+
+    return products.filter(elemPr => elemPr.category == catg.categId)
 }
 
 export { listCatg, productByCatg }
